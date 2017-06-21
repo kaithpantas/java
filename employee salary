@@ -1,0 +1,50 @@
+import java.util.Scanner; /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ 
+
+/**
+ *
+ * @author 412
+ */
+public class JavaApplication7 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+        Scanner input = new Scanner (System.in);
+        int [] array = new int [5];
+        
+        System.out.println ("Enter employee 1: ");
+         String name = input.next();
+         
+        System.out.println ("Enter employee 2: ");
+         String name2 = input.next();
+         
+        System.out.println ("Enter employee 3: ");
+         String name3 = input.next();
+         
+         System.out.println ("Enter employee 4: ");
+         String name4 = input.next();
+         
+         System.out.println ("Enter employee 5: ");
+         String name5 = input.next();
+         
+         
+        for (int i= 0; i<5; i++) {
+   
+         
+        System.out.println ("Number of days: ");
+            int nextInt = input.nextInt(); 
+            int product = nextInt * 800; 
+            System.out.println (product);
+           
+        
+    }
+    }
+    
+}
