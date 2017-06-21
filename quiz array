@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class BeerSong
+{
+    public static void main(String[]args)
+    {
+      Scanner input = new Scanner(System.in);
+      float sum = 0;
+      System.out.print("Enter number of quizes: " );
+      int quiznum = input.nextInt();
+      int[] quiz = new int[100];
+      for (int i = 0 ; i < quiznum ; i++)
+        {
+          quiz[i] = i;
+          System.out.print("Enter quiz #" + ( i + 1 ) + " score: ");
+          quiz[i] = input.nextInt();
+          sum += quiz[i];
+        }
+      float average = sum / quiznum;
+      System.out.println("Your average is " + average);
+}
+}
