@@ -1,0 +1,36 @@
+//NEWCLASS
+
+package classes;
+public class NewClass { 
+    
+    public String Surname;
+    public int Generation;
+    
+    public NewClass (String Surname, int Generation) {
+        
+        this.Surname = Surname;
+        this.Generation = Generation;
+        
+    }
+
+    public String getSurname() {
+        return Surname;
+    }
+
+    public int getGeneration() {
+        return Generation;
+    }
+}
+
+//MAINCLASS
+public class Classes {
+
+    public static void main(String[] args) {
+        
+        NewClass Pantas = new NewClass("Pantas", 200);
+        System.out.print (Pantas.getSurname());
+        System.out.print (Pantas.getGeneration());
+        // TODO code application logic here
+    }
+    
+}
