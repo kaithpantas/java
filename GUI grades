@@ -1,0 +1,90 @@
+import java.util.Scanner;
+public class Grades
+{public static void main(String args[]) {
+Scanner input = new Scanner(System.in);
+
+double sum = 0;
+
+System.out.print ("Enter homework: ");
+double homework = input.nextDouble();
+
+System.out. print ("Enter recitation: ");
+double recitation = input.nextDouble();
+
+System.out. print ("Enter seatwork: ");
+double seatwork = input.nextDouble();
+
+System.out. print ("Enter project: ");
+double project = input.nextDouble();
+
+System.out. print ("Enter examination: ");
+double examination = input.nextDouble();
+
+sum = homework * 0.10 + recitation * 0.20 + seatwork * 0.10 + project * 0.30 + examination * 0.30;
+    double average = sum; 
+    System.out.println (average);
+   
+
+
+if (average >= 98) {
+
+        System.out.print("Grade is 1.00");}
+
+else if(average >= 95)
+
+{ System.out.println("Grade is 1.25");}
+
+else if(average >=92){
+
+    System.out.print("Grade is 1.50");}
+
+else if(average >=89){
+
+    System.out.print("Grade is 1.75");}
+
+else if(average >=86){
+
+    System.out.print("Grade is 2.00");}
+
+else if(average >=83){
+
+    System.out.print("Grade is 2.25");}
+
+else if(average >=80){
+
+    System.out.print("Grade is 2.50");}
+
+else if(average >=77){
+
+    System.out.print("Grade is 2.75");}
+
+else if(average >=75){
+
+    System.out.print("Grade is 3.00");}
+
+else {
+
+    System.out.print("Grade is 5.00");}
+
+
+
+   
+
+
+   
+
+   
+
+
+   
+
+   
+
+   
+
+
+   
+
+
+}
+}
