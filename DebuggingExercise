@@ -1,0 +1,83 @@
+
+package labexercise;
+
+import java.io.IOException;
+
+
+public class LabExerciseDebugging {
+
+    
+    public static void main(String[] args) {
+        
+        private int maxSize;
+        private final double[] queArray;
+        private int nItems;
+        
+    /**
+     *
+     * @param s
+     */
+    public LabExerciseDebugging (int s) {
+            maxSize = s;
+        int maxsize = 0;
+            queArray = new double [maxsize];
+            nItems = 0;
+        }
+
+        public void insert (double item) {
+            int j;
+            
+            if (nItems ==0) {
+                queArray [nItems++] = item;
+            }
+                else {
+                
+                for (j=nItems = 1; j>=0; j--) {
+                    if (item > queArray[j]) {
+                        queArray [j+1] = item;
+                    }
+                        else { 
+                        break;
+                    }
+                    queArray [j+1] = item;
+                    nItems--;
+                }
+            }
+            
+            public double remove () {
+                return queArray [--nItems];
+            }
+            
+           public double peekMin() {
+               return queArray[nItems-1];
+           } 
+           
+           public boolean isEmpty () {
+               return (nItems==0);
+           }
+           public boolean isFull () {
+               return (nItems == maxSize);
+           }
+                
+        }
+class PriorityQApp {
+    public static void main (String args[]) throws IOException { 
+        PriorityQ thePQ = new PriorityQ(5);
+        thePQ.insert(546);
+        thePQ.insert(687);
+        thePQ.insert(36);
+        thePQ.insert(98);
+        thePQ.insert(957);
+        
+        while (!thePQ.isempty() ) {
+            double item = thePQ.remove();
+            System.out.print (item + "");
+        }
+        System.out.println("");
+        } 
+    }
+
+        // TODO code application logic here
+    
+    
+
