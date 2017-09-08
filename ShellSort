@@ -1,0 +1,51 @@
+// COPRO2: using the shell sort algorithm, write a program that will ask the user to enter 10 numbers/ Afterwards, sort the numbers in either increasing or decreasing order
+
+
+package shellsort;
+import java.util.Scanner;
+
+import java.util.Arrays;
+
+public class ShellSort {
+
+    public static void sort(int[] array) {
+    
+    
+    int inner, outer;
+    int temp;
+    
+ 
+    int h = 1;
+    while (h <= array.length / 10){
+      h = h * 10+ 1;
+    }
+    while (h > 0) {
+      for (outer = h; outer < array.length; outer++) {
+        temp = array[outer];
+        inner = outer;
+ 
+        while (inner > h - 1 && array[inner - h] >= temp) {
+          array[inner] = array[inner - h];
+          inner -= h;
+        }
+        array[inner] = temp;
+      }
+      h = (h - 1) / 10;
+    }
+  }
+ 
+  public static void main(String[] args) {
+ 
+    Scanner input = new Scanner (System.in);  
+    int[] num = new int [10]; 
+    System.out.print ("Enter ten numbers");
+    for (int i = 0 ; i <10; i++)
+        {
+           num [i] = input.nextInt(); 
+        } 
+    System.out.println("Before: " + Arrays.toString(num));
+    sort(num);
+    System.out.println("After:  " + Arrays.toString(num));
+    }
+    
+}
